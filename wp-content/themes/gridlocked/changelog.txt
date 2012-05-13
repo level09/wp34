@@ -1,0 +1,90 @@
+*** Gridlocked Changelog ***
+
+23 Jan 2012 - Version 1.3.4
+
+	* functions.php - load proper JS on archives page
+	* style.css - updated version number
+
+6 Jan 2012 - Version 1.3.3
+
+	* widget-tweets.php - updated to allow multiple instances
+	* functions.php
+		- updated validation plugin code to v1.9
+		- use wp_enqueue_scripts to load scripts
+	* style.css 
+		- updated version number
+		- fix hover color on images
+	* jquery.jplayer.min.js - updated to version 2.1
+	
+	ADDED:
+	* twitter.js
+
+11 October 2011 - Version 1.3.2
+	
+	* template-portfolio.php - Deleted extra code that loaded extra images.
+	* style.css - Fixed background color on this structure: <a href=""><img src="" /></a>
+	* config.php - Add Grey and Navy buttons to shortcode insert
+	* index.php - edited file to reduce the number of queries
+	* tag.php - Added file
+	* category.php - Added file
+	* author.php - Added file
+	* search.php - Added file
+	* date.php - Added file
+
+19 Sept 2011 - Version 1.3.1
+
+	* tinymce/plugin.js - Fixed shortcode image URL
+	* tinymce/config.php - Fixed shortcode bug
+	* functions/theme-shortcodes.php - Tabs now support multiple instances
+	* template-contact.php - Fixed bug
+	* style.css - Version number change
+
+15 Aug 2011 - Version 1.3
+	
+	* admin/admin-interface.php - Updated HTML
+	* admin/admin-styles.css - Updated styling
+	* functions/theme-shortcodes.php - Minor bug fixes
+	* functions/widget-flickr.php - Added type attribute
+	* functions/widget-video.php - Added type attribute
+	* functions/widget-tweets.php - New code
+	* functions.php - Updated file paths, removed obsolete image sizes
+	* style.css - Added gallery styling
+	
+	* MOVED admin/theme-functions.php to functions/ directory
+	* MOVED admin/theme-options.php to functions/ directory
+	
+	* ADDED tinymce/
+	
+	* REMOVED functions/tinymce/
+	* REMOVED functions/cache/
+
+05 July 2011 - Version 1.2
+
+	* single-portfolio.php - re-worked some code to fix audio types.
+	* functions/theme-portfoliometa.php - added a new option "tz_switch".
+	* template-portfolio.php - videos and audio can now have a lightbox.
+	* taxonomy-skill-type.php - videos and audio can now have a lightbox.
+
+30 June 2011 - Version 1.1
+	
+	* footer.php - Fixed slashes appearing when they shouldn't be.
+	* taxonomy-skill-type.php - Will now display all posts in that category.
+	* includes/image.php - When lightbox is disable the image will now link to the post.
+	* admin/theme-functions.php - Gallery types now cycle through images on click.
+	
+	NEW FEATURES
+	
+	Portfolio now supports audio. The audio player can display by itself or with your image slideshow.
+	You cannot show an audio player with a video player.
+	
+	Files changed:
+	
+	* single-portfolio.php
+	* functions/theme-portfoliometa.php
+	* admin/theme-functions.php
+	* functions.php
+	
+
+26 May 2011 - Version 1.0
+	
+	* First Release.
