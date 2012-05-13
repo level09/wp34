@@ -123,14 +123,15 @@ class wp_xmlrpc_server extends IXR_Server {
 			'demo.addTwoNumbers' => 'this:addTwoNumbers',
 			
 			//level09
-			'core.exists' => 'this:exists',
+			'core.title_exists' => 'this:title_exists',
+			'core.field_exists' => 'this:field_exists',			
 		);
 
 		$this->initialise_blog_option_info();
 		$this->methods = apply_filters('xmlrpc_methods', $this->methods);
 	}
 	
-	function exists($title){
+	function title_exists($title){
 		global $wpdb;
 		$result = $wpdb->get_row("SELECT post_title FROM wp_posts WHERE post_title = '" . $title . "' && post_status = 'publish'", 'ARRAY_A');
 
@@ -145,6 +146,20 @@ class wp_xmlrpc_server extends IXR_Server {
 		
 	
 		}
+
+	function field_exists($val){
+		global $wpdb;
+		//for performance, dont join and check on published posts
+		$result = $wpdb->get_row("SELECT post_id FROM wp_postmeta WHERE meta_value = '" . $val . "'", 'ARRAY_A');
+		if ($result) {
+			
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
 
 
 	function serve_request() {
